@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mensagem</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background: #2e59a5;">
+  <ion-card>
+    <ion-card-content>
+      <div>
+        <center><img [src]="message.photo" style="border-radius: 50%; width: 40%"/></center>
+      </div>
+      <br>
+      <div style="float: left; margin: 0px 0px 0px 0; max-width: 100%;">
+        <h2><b>{{message.senderName}}:</b></h2> <h2>{{ message.message }}</h2>
+        <br>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

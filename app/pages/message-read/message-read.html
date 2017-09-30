@@ -1,0 +1,21 @@
+<ion-content style="background-image: url('./bgimage.jpg');">
+  <ion-card *ngFor="let message of messageList">
+    <div class="box-address">
+      {{message.address}}
+    </div>
+    <div class="box-img">
+      <img [src]="message.map" alt="" />
+      <!-- <button fab fab-right fab-top class="fab-map"><ion-icon name="navigate"></ion-icon></button> -->
+    </div>
+    <ion-card-content>
+      <ion-avatar item-start style="float: left; padding: 1px; margin: 0px 3px 3px 0; max-width: 186px;">
+        <img [src]="message.photo" alt="" align="left" />
+      </ion-avatar>
+      <div style="float: left;  padding: 1px; margin: 0px 3px 3px 0; max-width: 85%;">
+        <h2><b>{{message.senderName}}</b> deixou uma mensagem para você.</h2>
+      </div>
+
+      <button primary clear block (click)="openMessage(message)">Ler</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
